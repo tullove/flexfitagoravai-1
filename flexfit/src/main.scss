@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Krona One;
+}
+
+
+html,
+body {
+    margin: 0;
+}
+
+#root {
+    overflow: auto;
+
+}
+
+body {
+    border: 2px solid #FFFF;
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.main-container {
+    border: 2px solid #FFFF;
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px;
+}
