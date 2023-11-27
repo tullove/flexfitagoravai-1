@@ -1,3 +1,4 @@
+import "./Entrar.scss"
 export default () => <div id="Entrar" className="main-container">
     <header>
         <p className="flex">FLEX</p>
