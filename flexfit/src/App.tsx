@@ -25,7 +25,7 @@ export default () => <>
       <Route path="/entrar" element={<Entrar />} />
       <Route path="/ficha" element={<Ficha />} />
       <Route path="/horarios" element={<Horarios />} />
-      <Route path="/logar" element= <LoginForm /> />
+      <Route path="/logar" element={<LoginForm />} />
       <Route path="/tabela" element={<Tabela />} />
     </Routes>
   </Router>

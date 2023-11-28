@@ -6,6 +6,6 @@ export default () => <div id="Entrar" className="main-container">
     </header>
     <main>
         <img src="/img/homem.png" alt="" />
-        <button>ENTRAR</button>
+        <button ><a href="../logar">ENTRAR</a></button>
     </main>
 </div>

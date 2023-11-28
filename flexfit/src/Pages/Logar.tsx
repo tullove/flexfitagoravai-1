@@ -48,7 +48,7 @@ const LoginForm: React.FC <LoginFormProps> = ({ onLogin }) => {
     </main>
     <footer>
         <button type="button" onClick={handleLogin} >ENTRAR</button>
-        <p className="text">Não possui login? <a href="../Cadastrar/cadastro.html" className="cadastrese">Cadastre-se</a></p>
+        <p className="text">Não possui login? <a href="../Cadastro" className="cadastrese">Cadastre-se</a></p>
     </footer>
 </div>
   );
