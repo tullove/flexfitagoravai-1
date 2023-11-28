@@ -17,9 +17,6 @@ export default () => <div id="Home" className="main-container">
         <button>
             <a href="/tabela"><img src="/img/halter.png" /></a>
         </button>
-        <button>
-            <a href="/perfil"><img src="/img/perfil.png" /></a>
-        </button>
     </footer>
 
 </div>
