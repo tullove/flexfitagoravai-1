@@ -1,5 +1,5 @@
 import { FormEvent, useState} from 'react'
-import { Input } from "../Input/";
+import { Input } from "../Input/"
 import styles from "./Cadastro.module.css"
 import {db} from '../Services/firebaseConnection'
 import{
@@ -13,7 +13,7 @@ export function Cadastro(){
   const [emailInput, setEmailInput] = useState("")
   const [academiaInput, setAcademiaInput] = useState("")
   const [sexoInput, setSexoInput] = useState("")
-  const [dataNascimentoInput, setdataNascimentoInput] = useState("")
+  const [dataNascimentoInput, setDataNascimentoInput] = useState("")
   const [telefoneInput, setTelefoneInput] = useState("")
   const [objetivoInput, setObjetivoInput] = useState("")
   const [observacaoInput, setObservacaoInput] = useState("")
@@ -50,7 +50,7 @@ export function Cadastro(){
       setEmailInput("")
       setAcademiaInput("")
       setSexoInput("")
-      setdataNascimentoInput("")
+      setDataNascimentoInput("")
       setTelefoneInput("")
       setObjetivoInput("")
       setObservacaoInput("")
@@ -89,23 +89,38 @@ export function Cadastro(){
         />
          <Input className={styles.formInput}
            placeholder="Sexo:"
-           value={senhaInput}
-          onChange={ (e) => setSenhaInput(e.target.value) }
+           value={sexoInput}
+          onChange={ (e) => setSexoInput(e.target.value) }
+        />
+                <Input className={styles.formInput}
+           placeholder="Data de Nascimento:"
+           value={dataNascimentoInput}
+          onChange={ (e) => setDataNascimentoInput(e.target.value) }
         />
          <Input className={styles.formInput}
-           placeholder="Senha:"
-           value={senhaInput}
-          onChange={ (e) => setSenhaInput(e.target.value) }
+           placeholder="Telefone:"
+           value={telefoneInput}
+          onChange={ (e) => setTelefoneInput(e.target.value) }
         />
-        <Input className={styles.formInput}
-           placeholder="Senha:"
-           value={senhaInput}
-          onChange={ (e) => setSenhaInput(e.target.value) }
+                <Input className={styles.formInput}
+           placeholder="Objetivo:"
+           value={objetivoInput}
+          onChange={ (e) => setObjetivoInput(e.target.value) }
+        />
+                <Input className={styles.formInput}
+           placeholder="Observação:"
+           value={observacaoInput}
+          onChange={ (e) => setObservacaoInput(e.target.value) }
         />
         <Input className={styles.formInput}
            placeholder="Cpf:"
            value={cpfInput}
           onChange={ (e) => setCpfInput(e.target.value) }
+        />
+                <Input className={styles.formInput}
+           placeholder="Senha:"
+           value={senhaInput}
+          onChange={ (e) => setSenhaInput(e.target.value) }
         />
 
         <button type='submit' className='button'>CADASTRAR</button>
