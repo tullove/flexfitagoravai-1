@@ -88,7 +88,7 @@ export function CadastroTreino(){
            onChange={ (e) => setDescricaoAInput(e.target.value) }
         />
         <Input className={styles.formInput}
-           placeholder="Indicação de peso para o aluno:"
+           placeholder="Indicação de peso:"
            value={pesoInput}
            onChange={ (e) => setPesoInput(e.target.value) }
         />

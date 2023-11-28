@@ -1,4 +1,5 @@
-import "./HomeAdm.scss"
+import "<div className="" />
+<HomeProf></HomeProf>.scss"
 
 export default () => <div id="Tabela" className="main-container">
     <header>
