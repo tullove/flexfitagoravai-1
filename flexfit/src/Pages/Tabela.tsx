@@ -1,12 +1,12 @@
 import "./Tabela.scss"
 
 export default () => <div id="Tabela" className="main-container">
-    <header>
-        <button className="voltar">
+    <button className="voltar">
             <a href="/Home">
                 <img src="/img/voltar.png" />
             </a>
         </button>
+    <header>
         <p className="flex">FLEX</p>
         <p>FIT</p>
     </header>

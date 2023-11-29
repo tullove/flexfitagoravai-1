@@ -29,7 +29,7 @@ export function CadastroProf(){
       return
     }
 
-    addDoc(collection(db,"dados"),{
+    addDoc(collection(db,"professor"),{
       nome:nomeInput,
       email: emailInput,
       academia: academiaInput,
@@ -112,8 +112,6 @@ export function CadastroProf(){
 
       </form>
       <footer>
-      <p className="text">Possui login? <a href="../Logar/login.html" className="cadastrese">Fazer login</a></p>
-        
     </footer>
 
     

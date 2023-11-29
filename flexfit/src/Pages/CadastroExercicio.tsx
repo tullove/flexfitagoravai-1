@@ -23,7 +23,7 @@ export function CadastroTreino(){
 
   function registro(e: FormEvent){
     e.preventDefault();
-    if(nomeExercicioInput === " " || tipoExercicioInput === " " || grupoMuscularInput === " " || descricaoCInput === " " || descricaoAInput === " " || pesoInput === " " || tempoDescansoInput  ){
+    if(nomeExercicioInput === " " || tipoExercicioInput === " " || grupoMuscularInput === " " || descricaoCInput === " " || descricaoAInput === " " || pesoInput === " " || tempoDescansoInput === " "  ){
       alert("Preencha todos os campos")
       return
     }

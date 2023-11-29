@@ -27,7 +27,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       onLogin();
-      navigate('/teste');
+      navigate('/home');
     } catch (error) {
       console.error('Erro no login:', error);
     }
@@ -42,7 +42,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
     </header>
     <main>
         <form>
-        <input type="email" value={email} onChange={handleEmailChange} placeholder='Nome:' />
+        <input  className='formInput' type="email" value={email} onChange={handleEmailChange} placeholder='Nome:' />
         <input className='formInput' type="password" value={password} onChange={handlePasswordChange} placeholder='Senha' />
 
         </form>

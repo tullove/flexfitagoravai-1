@@ -6,7 +6,8 @@ export default () => <div id="Tabela" className="main-container">
         <p>FIT</p>
     </header>
     
-    <main>
+    <main
+     className="main">
         <div className="titulo">
             <p className="letradiferente">TELA DO</p>
             <p>ADM</p>
@@ -21,9 +22,5 @@ export default () => <div id="Tabela" className="main-container">
             </div>
         </a>
     </main>
-
-    <footer>
-
-    </footer>
 
     </div >

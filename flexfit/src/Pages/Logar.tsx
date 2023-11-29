@@ -6,7 +6,6 @@ import "./Logar.scss"
 const Logar: React.FC = () => {
   const handleLogin = () => {
     console.log('Usuário logado');
-    // Adicione lógica adicional após o login, se necessário
   };
 
   return (
