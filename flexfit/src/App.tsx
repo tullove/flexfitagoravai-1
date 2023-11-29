@@ -7,8 +7,9 @@ import Entrar from "./Pages/Entrar";
 import Ficha from "./Pages/Ficha";
 import Home from "./Pages/Home";
 import HomeAdm from "./Pages/HomeAdm";
+import HomeProf from "./Pages/HomeProf";
 import Horarios from "./Pages/Horarios";
-import LoginForm from "./Pages/Logar";
+import Logar from "./Pages/Logar"
 import Tabela from "./Pages/Tabela";
 
 export default () => <>
@@ -18,6 +19,7 @@ export default () => <>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/homeAdm" element={<HomeAdm />} />
+      <Route path="/homeProf" element={<HomeProf />} />
       <Route path="/agenda" element={<Agenda />} />
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/cadastroProf" element={<CadastroProf />} />
@@ -25,7 +27,7 @@ export default () => <>
       <Route path="/entrar" element={<Entrar />} />
       <Route path="/ficha" element={<Ficha />} />
       <Route path="/horarios" element={<Horarios />} />
-      <Route path="/logar" element={<LoginForm />} />
+      <Route path="/logar" element={<Logar />} />
       <Route path="/tabela" element={<Tabela />} />
     </Routes>
   </Router>

@@ -1,60 +1,19 @@
-// src/components/LoginForm.tsx
-import React, { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+// src/pages/Logar.tsx
+import React from 'react';
+import LoginForm from '../Components/LoginForm';
 import "./Logar.scss"
-import { auth } from "../Services/firebaseConnection"; 
-import { useNavigate } from 'react-router-dom';
 
-interface LoginFormProps {
-  onLogin: () => void;
-}
-
-const LoginForm: React.FC <LoginFormProps> = ({ onLogin }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
-
-  const handleLogin = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      onLogin();
-      navigate('/teste')
-    } catch (error) {
-      console.error('Erro no login:' + error);
-    }
+const Logar: React.FC = () => {
+  const handleLogin = () => {
+    console.log('Usuário logado');
+    // Adicione lógica adicional após o login, se necessário
   };
 
   return (
-    <div id="Logar" className="main-container">
-    <header>
-        <p className="flex">FLEX</p>
-        <p>FIT</p>
-    </header>
-    <main>
-        <form>
-        <input type="email" value={email} onChange={handleEmailChange} placeholder='Nome:' />
-        <input type="password" value={password} onChange={handlePasswordChange} placeholder='Senha' />
-
-        </form>
-    </main>
-    <footer>
-        <button type="button" onClick={handleLogin} >ENTRAR</button>
-        <p className="text">Não possui login? <a href="../Cadastro" className="cadastrese">Cadastre-se</a></p>
-    </footer>
-</div>
+    <div>
+      <LoginForm onLogin={handleLogin} />
+    </div>
   );
 };
 
-export default LoginForm;
-
-
-
+export default Logar;

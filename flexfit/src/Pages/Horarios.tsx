@@ -2,7 +2,7 @@ import "./Horarios.scss"
 
 export default () => <div id="Horarios">
 <header>
-        <button className="voltar"><a href="/horario"><img src="/img/voltar.png" /></a></button>
+        <button className="voltar"><a href="/agenda"><img src="/img/voltar.png" /></a></button>
         <p className="flex">FLEX</p>
         <p>FIT</p>
     </header>

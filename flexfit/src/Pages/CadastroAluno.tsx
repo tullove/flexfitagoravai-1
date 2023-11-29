@@ -128,8 +128,7 @@ export function Cadastro(){
 
       </form>
       <footer>
-      <p className="text">Possui login? <a href="../Logar" className="cadastrese">Fazer login</a></p>
-        
+      
     </footer>
 
     

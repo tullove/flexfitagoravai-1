@@ -1,6 +1,4 @@
-import "<div className="" />
-<HomeProf></HomeProf>.scss"
-
+import "./HomeProf.module.css"
 export default () => <div id="Tabela" className="main-container">
     <header>
         <p className="flex">FLEX</p>
@@ -10,15 +8,11 @@ export default () => <div id="Tabela" className="main-container">
     <main>
         <div className="titulo">
             <p className="letradiferente">TELA DO</p>
-            <p>ADM</p>
+            <p>PROFESSOR</p>
         </div>
 
-        <a href="/cadastro">
-            <div className="container" id="cadastro">cadastro de <p>CLIENTE</p>
-            </div>
-        </a>
-        <a href="/cadastroProf">
-            <div className="container" id="cadastro">cadastro de <p>PROFESSOR</p>
+        <a href="/cadastroExercicio">
+            <div className="container" id="cadastro">cadastro de <p>EXERCICIO</p>
             </div>
         </a>
     </main>

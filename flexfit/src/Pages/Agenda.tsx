@@ -2,8 +2,9 @@ import "./Agenda.scss"
 
 export default () => <div id="Agenda">
     <header>
-        <button className="voltar"><a href="/home"><img src="/img/voltar.png" /></a></button>
-        <p className="flex">FLEX</p><p>FIT</p>
+        <button className="voltar"><a href="/agenda"><img src="/img/voltar.png" /></a></button>
+        <p className="flex">FLEX</p>
+        <p>FIT</p>
     </header>
     <main>
         <div className="titulo"><p className="letradiferente">SUA AGENDA DE</p><p>AULAS</p></div>
