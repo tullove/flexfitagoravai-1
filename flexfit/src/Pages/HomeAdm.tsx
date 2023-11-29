@@ -21,6 +21,10 @@ export default () => <div id="Tabela" className="main-container">
             <div className="container" id="cadastro">cadastro de <p>PROFESSOR</p>
             </div>
         </a>
+        <a href="/imprimi">
+            <div className="container" id="cadastro">ver todos <p>CLIENTES</p>
+            </div>
+        </a>
     </main>
 
     </div >

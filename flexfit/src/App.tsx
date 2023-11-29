@@ -11,6 +11,7 @@ import HomeProf from "./Pages/HomeProf";
 import Horarios from "./Pages/Horarios";
 import Logar from "./Pages/Logar"
 import Tabela from "./Pages/Tabela";
+import {ImprimiAluno} from "./Pages/ImprimiAluno"
 
 export default () => <>
 
@@ -29,6 +30,7 @@ export default () => <>
       <Route path="/horarios" element={<Horarios />} />
       <Route path="/logar" element={<Logar />} />
       <Route path="/tabela" element={<Tabela />} />
+      <Route path="/imprimi" element={<ImprimiAluno />} />
     </Routes>
   </Router>
 </>

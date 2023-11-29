@@ -1,83 +1,61 @@
 import { useEffect, useState } from 'react'
-
-import { Social } from '../../components/Social'
-
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
-
-import { db } from '../../services/firebaseConnection'
+import { db } from '../Services/firebaseConnection'
 import{
   getDocs, 
   collection,
-  orderBy, 
   query,
   doc,
   getDoc,
 } from 'firebase/firestore'
-//import { LinkProps } from 'react-router-dom'
 
-interface LinksProps{ /*cliente*/
-  id: string;
-  name: string;
-  url: string;
-  bg: string;
-  color: string;
+interface cliente{ 
+  nome: string;
+  objetivo: string;
+  obsercacao: string;
 }
 
-interface socialLinksProp{
-  facebook: string;
-  youtube: string;
-  instagram: string;
-}//não precisa
+export function ImprimiAluno(){ 
+  const [cliente, setCliente] = useState<cliente[]>([]);
 
-
-export function Home(){ /*setCliente*/
-  const [links, setLinks] = useState<LinksProps[]>([]);
-  const [socialLinks, setSocialLinks] = useState<socialLinksProp>() //  são duas tabelas diferentes
 
   useEffect (()=>{
-    function carregarLinks(){ //carregarCliente
-      /*clienteRef*/ const linksRef = collection(db, "links") // colocar o nome da tabela que quero pegar info
-      const queryRef = query(linksRef) /*clienteRef*/
+    function carregarCliente(){ 
+      const clienteRef = collection(db, "dados") 
+      const queryRef = query(clienteRef) 
     
       getDocs(queryRef)
       .then((snapshot) => {
-        let lista = [] as LinksProps[];
+        let lista = [] as cliente[];
 
         snapshot.forEach((doc) => {
           lista.push({
-            id: doc.id,
-            name: doc.data().name,
-            url: doc.data().url,
-            bg: doc.data().bg,
-            color: doc.data().color,
-
+            nome: doc.data().nome,
+            objetivo: doc.data().objetivo,
+            obsercacao: doc.data().obsercacao,
           })
         })
-        setLinks(lista);
+        setCliente(lista);
       })
     }
-    carregarLinks();
+    carregarCliente();
   },[])
 
 
 
   return(
     <div className="flex flex-col w-full py-4 items-center justify-center">
-      <h1 className="md:text-4xl  text-3xl font-bold text-white mt-20">Instituto Federal Catarinense</h1>
-      <span className="text-white mb-5 mt-3 ">Veja meus links 👇</span>
+      <h1 className="md:text-4xl  text-3xl font-bold text-white mt-20">Clientes</h1>
+      <span className="text-white mb-5 mt-3 ">Veja os clientes👇</span>
       
 
       <main className="flex flex-col w-11/12 max-w-xl text-center">
-     {/*cliente*/}  {links.map((link) => (
+         {cliente.map((cliente) => (
           <section 
-          style={{background: link.bg}}
-          key={link.id}
           className=" mb-4 w-full py-2 rounded-lg select-none transition-transform hover:scale-105 cursor-pointer">
-          <a href={link.url} target="_blank">
-            <p className="text-base md:text-lg" style={{color: link.color}}>
-              {link.name}
+            <p className="text-base md:text-lg">
+              {cliente.nome}
             </p>
-          </a>
+ 
         </section>
         ))}
 
