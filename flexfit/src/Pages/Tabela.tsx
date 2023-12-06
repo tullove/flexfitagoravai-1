@@ -2,7 +2,7 @@ import "./Tabela.scss"
 
 export default () => <div id="Tabela" className="main-container">
     <button className="voltar">
-            <a href="/Home">
+            <a href="/home">
                 <img src="/img/voltar.png" />
             </a>
         </button>

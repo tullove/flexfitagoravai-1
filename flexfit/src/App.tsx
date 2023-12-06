@@ -12,6 +12,7 @@ import Horarios from "./Pages/Horarios";
 import Logar from "./Pages/Logar"
 import Tabela from "./Pages/Tabela";
 import {ImprimiAluno} from "./Pages/ImprimiAluno"
+import {ImprimiProfessor} from "./Pages/imprimiProfessor"
 
 export default () => <>
 
@@ -31,6 +32,7 @@ export default () => <>
       <Route path="/logar" element={<Logar />} />
       <Route path="/tabela" element={<Tabela />} />
       <Route path="/imprimi" element={<ImprimiAluno />} />
+      <Route path="/imprimiProfessor" element={<ImprimiProfessor />} />
     </Routes>
   </Router>
 </>

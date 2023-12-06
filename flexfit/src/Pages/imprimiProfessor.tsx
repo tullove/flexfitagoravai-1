@@ -9,36 +9,32 @@ import{
   getDoc,
 } from 'firebase/firestore'
 
-interface cliente{ 
+interface professor{ 
   nome: string;
-  objetivo: string;
-  obsercacao: string;
 }
 
-export function ImprimiAluno(){ 
-  const [cliente, setCliente] = useState<cliente[]>([]);
+export function ImprimiProfessor(){ 
+  const [professor, setProfessor] = useState<professor[]>([]);
 
 
   useEffect (()=>{
-    function carregarCliente(){ 
-      const clienteRef = collection(db, "dados") 
+    function carregarProfessor(){ 
+      const clienteRef = collection(db, "professor") 
       const queryRef = query(clienteRef) 
     
       getDocs(queryRef)
       .then((snapshot) => {
-        let lista = [] as cliente[];
+        let lista = [] as professor[];
 
         snapshot.forEach((doc) => {
           lista.push({
             nome: doc.data().nome,
-            objetivo: doc.data().objetivo,
-            obsercacao: doc.data().obsercacao,
           })
         })
-        setCliente(lista);
+        setProfessor(lista);
       })
     }
-    carregarCliente();
+    carregarProfessor();
   },[])
 
 
@@ -46,15 +42,15 @@ export function ImprimiAluno(){
   return(
     <div className="flex flex-col w-full py-4 items-center justify-center">
       <h1 className="md:text-4xl  text-3xl font-bold text-white mt-20">Clientes</h1>
-      <span className="text-white mb-5 mt-3 ">Veja os clientes👇</span>
+      <span className="text-white mb-5 mt-3 ">Veja os professores👇</span>
       
 
       <main className="flex flex-col w-11/12 max-w-xl text-center">
-         {cliente.map((cliente) => (
+         {professor.map((professor) => (
           <section 
           className=" mb-4 w-full py-2 rounded-lg select-none transition-transform hover:scale-105 cursor-pointer">
             <p className="text-base md:text-lg">
-              {cliente.nome}
+              {professor.nome}
             </p>
  
         </section>
